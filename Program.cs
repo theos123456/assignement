@@ -20,7 +20,9 @@ namespace employee {
          double gross ; 
          double Netsalary ; 
          double Total;
-
+         string name;
+         Console.WriteLine("enter Employees name");
+         name=Console.WriteLine();
          Console.WriteLine("enter employee type");
          emp1.emptype = Console.ReadLine();
           if(emp1.emptype=="monthly")
@@ -29,7 +31,7 @@ namespace employee {
                     emp1.salary1=Convert.ToDouble(Console.ReadLine());
                     gross=emp1.salary1-((emp1.salary1*18)/100);
                     Netsalary=gross-((gross*3)/100);
-                    Console.WriteLine("your net salary is {0}",Netsalary);
+                    Console.WriteLine("Mr/Mrs {0}your net salary is {1}",name,Netsalary);
           }
           else if(emp1.emptype=="temporary")
           {
@@ -39,7 +41,7 @@ namespace employee {
                     emp1.hour=Convert.ToDouble(Console.ReadLine());
                     Total=emp1.salary1*emp1.hour;
                     gross=Total-((Total*18)/100);
-                    Console.WriteLine("your net salary is {0}",gross);   
+                    Console.WriteLine("Mr/Mrs {0} your net salary is {1}",name,gross);   
           }
           else if (emp1.emptype=="evening")
           {
@@ -50,7 +52,7 @@ namespace employee {
                     Total=emp1.salary1*emp1.hour;
                     Netsalary=Total+((Total*0.15)/100);
                     gross=Netsalary-((Netsalary*18)/100);
-                    Console.WriteLine("your net salary is {0}",gross);     
+                    Console.WriteLine("Mr/Mrs {0} your net salary is {1}",name,gross);     
           }
           else{
               Console.WriteLine("invalid employee type");
